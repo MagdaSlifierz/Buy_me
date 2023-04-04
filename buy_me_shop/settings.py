@@ -116,6 +116,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51M5P9RDbxUlHU6HYAc5Aq9SLlv9vTjlC5yA70CNHQOUKLFP0vgkR9RzGfIHKt26EU9cz4Z8sHUAUvdMGiUmyNC2m00MCidFjg1' 
+STRIPE_SECRET_KEY = 'sk_test_51M5P9RDbxUlHU6HYU0UaZ5iZ4wUXfAMvNYSStJk3Ioq5dCmqM2NnjWVUepycMZNySqBzb7X8e7SVeQQqY1iL5UU3000WkLKcFB' 
+STRIPE_API_VERSION = '2022-11-15'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
