@@ -1,5 +1,6 @@
 from django.db import models
 from shop.models import Product
+from django.conf import settings
 
 # Create your models here.
 
@@ -20,11 +21,25 @@ class Order(models.Model):
         indexes = [
             models.Index(fields=['-created']),
         ]
-def __str__(self):
-    return f'Order {self.id}'
+    def __str__(self):
+        return f'Order {self.id}'
 
-def get_total_cost(self):
-    return sum(item.get_cost() for item in self.items.all())
+    def get_total_cost(self):
+        return sum(item.get_cost() for item in self.items.all())
+
+
+    def get_stripe_url(self):
+        if not self.stripe_id:
+            # no payment associated
+            return ''
+        if '_test_' in settings.STRIPE_SECRET_KEY:
+            # Stripe path for test payments
+            path = '/test/'
+        else:
+            # Stripe path for real payments
+            path = '/'
+        return f'https://dashboard.stripe.com{path}payments/{self.stripe_id}'
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, 
@@ -37,8 +52,9 @@ class OrderItem(models.Model):
                                 decimal_places=2)
     quantity = models.PositiveBigIntegerField(default=1)
 
-def __str__(self):
-    return str(self.id)
+    def __str__(self):
+        return str(self.id)
 
-def get_cost(self):
-    return self.price * self.quantity
+    def get_cost(self):
+        return self.price * self.quantity
+

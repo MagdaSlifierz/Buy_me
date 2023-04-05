@@ -128,6 +128,7 @@ STRIPE_WEBHOOK_SECRET = 'whsec_1720b6bf80fc33c1c8aeb9b2f7bd0fd2d42684f9ca3ca7941
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
