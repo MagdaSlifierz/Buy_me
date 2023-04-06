@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
+    'coupons.apps.CouponsConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,10 @@ STRIPE_PUBLISHABLE_KEY = 'pk_test_51M5P9RDbxUlHU6HYAc5Aq9SLlv9vTjlC5yA70CNHQOUKL
 STRIPE_SECRET_KEY = 'sk_test_51M5P9RDbxUlHU6HYU0UaZ5iZ4wUXfAMvNYSStJk3Ioq5dCmqM2NnjWVUepycMZNySqBzb7X8e7SVeQQqY1iL5UU3000WkLKcFB' 
 STRIPE_API_VERSION = '2022-11-15'
 STRIPE_WEBHOOK_SECRET = 'whsec_1720b6bf80fc33c1c8aeb9b2f7bd0fd2d42684f9ca3ca7941753aa6024bac3a0'
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
