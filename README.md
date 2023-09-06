@@ -46,13 +46,13 @@ Once the project is set up, you can use it as an e-commerce website. Here are so
 
 This project is built with the following technologies:
 
-Django: A high-level Python web framework for building web applications.
-Stripe: A popular payment processing platform for handling payments securely.
-HTML/CSS: For structuring and styling web pages.
-JavaScript: For client-side interactivity.
-Bootstrap: A front-end framework for responsive web design.
-Python: The programming language used for the backend logic.
-SQLite: The default database used for data storage.
+- **Django**: A high-level Python web framework for building web applications.
+- **Stripe**: A popular payment processing platform for handling payments securely.
+- **HTML/CSS**: For structuring and styling web pages.
+- **JavaScript**: For client-side interactivity.
+- **Bootstrap**: A front-end framework for responsive web design.
+- **Python**: The programming language used for the backend logic.
+- **SQLite**: The default database used for data storage.
   
 ## Installation
 
